@@ -60,7 +60,7 @@ public class ServletListadoPeliculas extends HttpServlet {
             while (iterator.hasNext()) {
                 Pelicula pelicula = (Pelicula) iterator.next();
                 out.println("<ul>");
-                out.println("<li>" + pelicula.getNombre() + "</li>");
+                out.println("<li>" + pelicula.getInformacion() + "</li>");
                 out.println("</ul>");
             }
 

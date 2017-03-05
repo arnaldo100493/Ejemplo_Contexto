@@ -56,6 +56,12 @@ public class Pelicula {
         this.imagen = pelicula.getImagen();
     }
 
+    public String getInformacion() {
+        String img = "<img width='100' src='imagenes/../'" + this.imagen + "\" />";
+        img = "";
+        return img + this.nombre + " (Dirigida por " + this.director + ") [" + this.anio + "]";
+    }
+
     @Override
     public String toString() {
         return "Pelicula{" + "nombre=" + nombre + ", director=" + director + ", anio=" + anio + ", imagen=" + imagen + '}';
