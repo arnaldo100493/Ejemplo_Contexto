@@ -17,9 +17,9 @@ import javax.servlet.ServletContextListener;
  *
  * @author FABAME
  */
-public class ServletListener implements ServletContextListener {
+public class VideoClubServletListener implements ServletContextListener {
 
-    public ServletListener() {
+    public VideoClubServletListener() {
 
     }
 
