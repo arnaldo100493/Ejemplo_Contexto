@@ -61,8 +61,8 @@ public class ServletGuardarPelicula extends HttpServlet {
 
             if (!listadoMensajesError.isEmpty()) {
                 request.setAttribute("listadoMensajesError", listadoMensajesError);
-                RequestDispatcher rd = request.getRequestDispatcher("/formAgregarPelicula.view");
-                rd.forward(request, response);
+                RequestDispatcher view = request.getRequestDispatcher("/formAgregarPelicula.view");
+                view.forward(request, response);
                 return;
             }
 
@@ -71,8 +71,8 @@ public class ServletGuardarPelicula extends HttpServlet {
             ServletContext contexto = this.getServletContext();
             List<Pelicula> listadoPeliculas = (List<Pelicula>) contexto.getAttribute("listadoPeliculas");
             listadoPeliculas.add(pelicula);
-            RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-            rd.forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
+            view.forward(request, response);
             return;
 
         } finally {
