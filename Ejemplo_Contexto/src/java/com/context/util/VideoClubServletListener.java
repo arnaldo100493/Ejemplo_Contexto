@@ -27,11 +27,16 @@ public class VideoClubServletListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         List<Pelicula> listadoPeliculas = new LinkedList<>();
         listadoPeliculas.add(new Pelicula("Inception", "Nolan"));
-        listadoPeliculas.add(new Pelicula("Lord of the Ring", "Jackson"));
+        listadoPeliculas.add(new Pelicula("The Lord of the Rings", "Jackson"));
         listadoPeliculas.add(new Pelicula("Be Kind Rewind", "Gondry"));
+        listadoPeliculas.add(new Pelicula("Ironman", "Jhon Favreau"));
+        listadoPeliculas.add(new Pelicula("Alien", "Scott"));
+        listadoPeliculas.add(new Pelicula("Resident Evil", "Anderson"));
+        listadoPeliculas.add(new Pelicula("Kill Bill", "Tarantino"));
 
         ServletContext contexto = sce.getServletContext();
         contexto.setAttribute("listadoPeliculas", listadoPeliculas);
+        contexto.log("Se ha cargado el listado de peliculas.");
     }
 
     @Override
